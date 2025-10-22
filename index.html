@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="converter.css">
     <link rel="manifest" href="manifest.json">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
@@ -28,9 +29,10 @@
         </select>
         <output name="output-temp" id="output-temp" for="input-temp input-unit outputunit">68 F</output>
     </form>
+     <script src="sw.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+            navigator.serviceWorker.register('./sw.js', { scope: '/' });
         }
     </script>
 
